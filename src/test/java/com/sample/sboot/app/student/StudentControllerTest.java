@@ -10,6 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.BDDMockito.given;
 
@@ -31,6 +32,7 @@ public class StudentControllerTest {
     public void name() {
         List<Student> actual = studentController.getAllStudents();
         assertEquals(actual.get(0).getName(), "Test");
+        assertThat(studentController).isNotNull();
 
     }
 
@@ -38,7 +40,7 @@ public class StudentControllerTest {
     public void testHello() {
         System.out.println("hello");
         StudentController instance = new StudentController();
-        String expResult = "Hello from App :)";
+        String expResult = "Hello from App using git:)";
         String result = instance.hello();
         assertEquals(expResult, result);
     }
