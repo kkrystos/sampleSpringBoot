@@ -16,7 +16,7 @@ public class StudentController {
 
     @GetMapping("/")
     public String hello() {
-        return "Hello from App :)";
+        return "Hello from App using git:)";
     }
 
     @GetMapping("/students")
